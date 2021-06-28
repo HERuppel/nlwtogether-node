@@ -6,6 +6,12 @@ module.exports = {
   password: process.env.TYPE_ORM_DEFAULT_PASSWORD,
   database: process.env.TYPE_ORM_DEFAULT_DATABASE,
   synchronize: false,
+  ssl: true,
+  extra: {
+    ssl: {
+      rejectUnauthorized: false
+    },
+  },
   entities: [
     './src/models/*.ts'
   ],
